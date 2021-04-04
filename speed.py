@@ -6,9 +6,11 @@ import os
 
 args = sys.argv
 if(len(args) != 2):
-    print('Invalid argment')
-    print('"/path/to/speed.py <interface name (ex: enp0s1)>"')
-    sys.exit(1)
+   print('Invalid argment')
+   print('"/path/to/speed.py <interface name (ex: enp0s1)>"')
+   sys.exit(1)
+
+print('Please wati ...\r',end='')
 
 try:
    res = str(subprocess.check_output(['ip', '-s', 'link', 'show', 'dev', args[1]]).decode())

@@ -7,7 +7,7 @@ import os
 args = sys.argv
 if(len(args) != 2):
    print('Invalid argment')
-   print('"/path/to/speed.py <interface name (ex: enp0s1)>"')
+   print('"speed.py <interface name>"')
    sys.exit(1)
 
 print('Please wati ...\r',end='')

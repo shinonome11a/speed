@@ -18,6 +18,8 @@ except:
    sys.exit(1)
 rx = float(res.split('\n')[3].split()[0])
 tx = float(res.split('\n')[5].split()[0])
+rx_init = rx
+tx_init = tx
 
 os.system('clear')
 print('Please wati ...\r',end='')
@@ -37,6 +39,8 @@ try:
 
       rx_speed = (rx - rx_old) * 8
       tx_speed = (tx - tx_old) * 8
+      rx_bites = (rx - rx_init)
+      tx_bites = (tx - tx_init)
 
       print('Interface: ' + args[1])
       if(rx_speed / 1000000000 > 1 or tx_speed / 1000000000 > 1):
@@ -51,8 +55,24 @@ try:
       else:
          print('RX speed: ' + str(rx_speed) + ' bps                   ')
          print('TX speed: ' + str(tx_speed) + ' bps                   ')
+      
+      if(rx_bites / 1000000000000 > 1 or tx_bites / 1000000000000 > 1):
+         print('RX bites: ' + str(rx_bites / 1000000000000) + ' TB                   ')
+         print('TX bites: ' + str(tx_bites / 1000000000000) + ' TB                   ')
+      elif(rx_bites / 1000000000 > 1 or tx_bites / 1000000000 > 1):
+         print('RX bites: ' + str(rx_bites / 1000000000) + ' GB                   ')
+         print('TX bites: ' + str(tx_bites / 1000000000) + ' GB                   ')
+      elif(rx_bites / 1000000 > 1 or tx_bites / 1000000 > 1):
+         print('RX bites: ' + str(rx_bites / 1000000) + ' MB                   ')
+         print('TX bites: ' + str(tx_bites / 1000000) + ' MB                   ')
+      elif(rx_bites / 1000 > 1 or tx_bites / 1000 > 1):
+         print('RX bites: ' + str(rx_bites / 1000) + ' kB                   ')
+         print('TX bites: ' + str(tx_bites / 1000) + ' kB                   ')
+      else:
+         print('RX bites: ' + str(rx_bites) + ' B                   ')
+         print('TX bites: ' + str(tx_bites) + ' B                   ')
 
-      print("\033[3A",end="")
+      print("\033[5A",end="")
       time.sleep(1)
 except KeyboardInterrupt:
    os.system('clear')

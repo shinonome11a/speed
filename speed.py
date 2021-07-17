@@ -82,8 +82,30 @@ try:
          print('TX bites: ' + str(tx_bites / 1000) + ' kB                   ')
       else:
          print('TX bites: ' + str(tx_bites) + ' B                   ')
+      
+      if(rx / 1000000000000 > 1):
+         print('RX total: ' + str(rx / 1000000000000) + ' TB                   ')
+      elif(rx / 1000000000 > 1):
+         print('RX total: ' + str(rx / 1000000000) + ' GB                   ')
+      elif(rx / 1000000 > 1):
+         print('RX: total' + str(rx / 1000000) + ' MB                   ')
+      elif(rx / 1000 > 1):
+         print('RX: total' + str(rx / 1000) + ' kB                   ')
+      else:
+         print('RX total: ' + str(rx) + ' B                   ')
+      
+      if(tx / 1000000000000 > 1):
+         print('TX total: ' + str(tx / 1000000000000) + ' TB                   ')
+      elif(tx / 1000000000 > 1):
+         print('TX total: ' + str(tx / 1000000000) + ' GB                   ')
+      elif(tx / 1000000 > 1):
+         print('TX total: ' + str(tx / 1000000) + ' MB                   ')
+      elif(tx / 1000 > 1):
+         print('TX total: ' + str(tx / 1000) + ' kB                   ')
+      else:
+         print('TX total: ' + str(tx) + ' B                   ')
 
-      print("\033[7A",end="")
+      print("\033[9A",end="")
       time.sleep(1)
 except KeyboardInterrupt:
    os.system('clear')

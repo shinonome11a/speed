@@ -20,6 +20,7 @@ rx = float(res.split('\n')[3].split()[0])
 tx = float(res.split('\n')[5].split()[0])
 rx_init = rx
 tx_init = tx
+start = 'start at: ' + str(subprocess.check_output(['date']).decode())
 
 os.system('clear')
 print('Please wati ...\r',end='')
@@ -43,36 +44,46 @@ try:
       tx_bites = (tx - tx_init)
 
       print('Interface: ' + args[1])
-      if(rx_speed / 1000000000 > 1 or tx_speed / 1000000000 > 1):
+      print(start)
+      if(rx_speed / 1000000000 > 1):
          print('RX speed: ' + str(rx_speed / 1000000000) + ' Gbps                   ')
-         print('TX speed: ' + str(tx_speed / 1000000000) + ' Gbps                   ')
-      elif(rx_speed / 1000000 > 1 or tx_speed / 1000000 > 1):
+      elif(rx_speed / 1000000 > 1):
          print('RX speed: ' + str(rx_speed / 1000000) + ' Mbps                   ')
-         print('TX speed: ' + str(tx_speed / 1000000) + ' Mbps                   ')
-      elif(rx_speed / 1000 > 1 or tx_speed / 1000 > 1):
+      elif(rx_speed / 1000 > 1):
          print('RX speed: ' + str(rx_speed / 1000) + ' kbps                   ')
-         print('TX speed: ' + str(tx_speed / 1000) + ' kbps                   ')
       else:
          print('RX speed: ' + str(rx_speed) + ' bps                   ')
+      if(tx_speed / 1000000000 > 1):
+         print('TX speed: ' + str(tx_speed / 1000000000) + ' Gbps                   ')
+      elif(tx_speed / 1000000 > 1):
+         print('TX speed: ' + str(tx_speed / 1000000) + ' Mbps                   ')
+      elif(tx_speed / 1000 > 1):
+         print('TX speed: ' + str(tx_speed / 1000) + ' kbps                   ')
+      else:
          print('TX speed: ' + str(tx_speed) + ' bps                   ')
       
-      if(rx_bites / 1000000000000 > 1 or tx_bites / 1000000000000 > 1):
+      if(rx_bites / 1000000000000 > 1):
          print('RX bites: ' + str(rx_bites / 1000000000000) + ' TB                   ')
-         print('TX bites: ' + str(tx_bites / 1000000000000) + ' TB                   ')
-      elif(rx_bites / 1000000000 > 1 or tx_bites / 1000000000 > 1):
+      elif(rx_bites / 1000000000 > 1):
          print('RX bites: ' + str(rx_bites / 1000000000) + ' GB                   ')
-         print('TX bites: ' + str(tx_bites / 1000000000) + ' GB                   ')
-      elif(rx_bites / 1000000 > 1 or tx_bites / 1000000 > 1):
+      elif(rx_bites / 1000000 > 1):
          print('RX bites: ' + str(rx_bites / 1000000) + ' MB                   ')
-         print('TX bites: ' + str(tx_bites / 1000000) + ' MB                   ')
-      elif(rx_bites / 1000 > 1 or tx_bites / 1000 > 1):
+      elif(rx_bites / 1000 > 1):
          print('RX bites: ' + str(rx_bites / 1000) + ' kB                   ')
-         print('TX bites: ' + str(tx_bites / 1000) + ' kB                   ')
       else:
          print('RX bites: ' + str(rx_bites) + ' B                   ')
+      if(tx_bites / 1000000000000 > 1):
+         print('TX bites: ' + str(tx_bites / 1000000000000) + ' TB                   ')
+      elif(tx_bites / 1000000000 > 1):
+         print('TX bites: ' + str(tx_bites / 1000000000) + ' GB                   ')
+      elif(tx_bites / 1000000 > 1):
+         print('TX bites: ' + str(tx_bites / 1000000) + ' MB                   ')
+      elif(tx_bites / 1000 > 1):
+         print('TX bites: ' + str(tx_bites / 1000) + ' kB                   ')
+      else:
          print('TX bites: ' + str(tx_bites) + ' B                   ')
 
-      print("\033[5A",end="")
+      print("\033[7A",end="")
       time.sleep(1)
 except KeyboardInterrupt:
    os.system('clear')

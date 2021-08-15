@@ -88,9 +88,9 @@ try:
       elif(rx / 1000000000 > 1):
          print('RX total: ' + str(rx / 1000000000) + ' GB                   ')
       elif(rx / 1000000 > 1):
-         print('RX total:　' + str(rx / 1000000) + ' MB                   ')
+         print('RX total: ' + str(rx / 1000000) + ' MB                   ')
       elif(rx / 1000 > 1):
-         print('RX total:　' + str(rx / 1000) + ' kB                   ')
+         print('RX total: ' + str(rx / 1000) + ' kB                   ')
       else:
          print('RX total: ' + str(rx) + ' B                   ')
       

@@ -105,7 +105,7 @@ try:
       else:
          print('TX total: ' + str(tx) + ' B                   ')
 
-      print("\033[9A",end="")
+      print("\033[90A",end="")
       time.sleep(1)
 except KeyboardInterrupt:
    os.system('clear')

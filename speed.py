@@ -3,6 +3,7 @@ import subprocess
 import time
 import sys
 import os
+#import shutil
 
 args = sys.argv
 if(len(args) != 2):
@@ -22,11 +23,18 @@ rx_init = rx
 tx_init = tx
 start = 'start at: ' + str(subprocess.check_output(['date']).decode())
 
+terminal_size_old = os.get_terminal_size()
+
 os.system('clear')
 print('Please wati ...\r',end='')
 time.sleep(1)
 try:
    while True:
+      terminal_size = os.get_terminal_size()
+      if (terminal_size.columns != terminal_size_old.columns) or (terminal_size.lines != terminal_size_old.lines):
+         os.system('clear')
+      terminal_size_old = terminal_size
+      
       rx_old = rx
       tx_old = tx
 

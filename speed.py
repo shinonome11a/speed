@@ -54,62 +54,62 @@ try:
       print('Interface: ' + args[1])
       print(start)
       if(rx_speed / 1000000000 > 1):
-         print('RX speed: ' + str(rx_speed / 1000000000) + ' Gbps                   ')
+         print('RX speed: ' + str(round(rx_speed / 1000000000, 2)) + ' Gbps                   ')
       elif(rx_speed / 1000000 > 1):
-         print('RX speed: ' + str(rx_speed / 1000000) + ' Mbps                   ')
+         print('RX speed: ' + str(round(rx_speed / 1000000, 2)) + ' Mbps                   ')
       elif(rx_speed / 1000 > 1):
-         print('RX speed: ' + str(rx_speed / 1000) + ' kbps                   ')
+         print('RX speed: ' + str(round(rx_speed / 1000, 2)) + ' kbps                   ')
       else:
          print('RX speed: ' + str(rx_speed) + ' bps                   ')
       if(tx_speed / 1000000000 > 1):
-         print('TX speed: ' + str(tx_speed / 1000000000) + ' Gbps                   ')
+         print('TX speed: ' + str(round(tx_speed / 1000000000, 2)) + ' Gbps                   ')
       elif(tx_speed / 1000000 > 1):
-         print('TX speed: ' + str(tx_speed / 1000000) + ' Mbps                   ')
+         print('TX speed: ' + str(round(tx_speed / 1000000, 2)) + ' Mbps                   ')
       elif(tx_speed / 1000 > 1):
-         print('TX speed: ' + str(tx_speed / 1000) + ' kbps                   ')
+         print('TX speed: ' + str(round(tx_speed / 1000, 2)) + ' kbps                   ')
       else:
          print('TX speed: ' + str(tx_speed) + ' bps                   ')
       
       if(rx_bites / 1000000000000 > 1):
-         print('RX bites: ' + str(rx_bites / 1000000000000) + ' TB                   ')
+         print('RX bites: ' + str(round(rx_bites / 1000000000000, 2)) + ' TB                   ')
       elif(rx_bites / 1000000000 > 1):
-         print('RX bites: ' + str(rx_bites / 1000000000) + ' GB                   ')
+         print('RX bites: ' + str(round(rx_bites / 1000000000, 2)) + ' GB                   ')
       elif(rx_bites / 1000000 > 1):
-         print('RX bites: ' + str(rx_bites / 1000000) + ' MB                   ')
+         print('RX bites: ' + str(round(rx_bites / 1000000, 2)) + ' MB                   ')
       elif(rx_bites / 1000 > 1):
-         print('RX bites: ' + str(rx_bites / 1000) + ' kB                   ')
+         print('RX bites: ' + str(round(rx_bites / 1000, 2)) + ' kB                   ')
       else:
          print('RX bites: ' + str(rx_bites) + ' B                   ')
       if(tx_bites / 1000000000000 > 1):
-         print('TX bites: ' + str(tx_bites / 1000000000000) + ' TB                   ')
+         print('TX bites: ' + str(round(tx_bites / 1000000000000, 2)) + ' TB                   ')
       elif(tx_bites / 1000000000 > 1):
-         print('TX bites: ' + str(tx_bites / 1000000000) + ' GB                   ')
+         print('TX bites: ' + str(round(tx_bites / 1000000000, 2)) + ' GB                   ')
       elif(tx_bites / 1000000 > 1):
-         print('TX bites: ' + str(tx_bites / 1000000) + ' MB                   ')
+         print('TX bites: ' + str(round(tx_bites / 1000000, 2)) + ' MB                   ')
       elif(tx_bites / 1000 > 1):
-         print('TX bites: ' + str(tx_bites / 1000) + ' kB                   ')
+         print('TX bites: ' + str(round(tx_bites / 1000, 2)) + ' kB                   ')
       else:
          print('TX bites: ' + str(tx_bites) + ' B                   ')
       
       if(rx / 1000000000000 > 1):
-         print('RX total: ' + str(rx / 1000000000000) + ' TB                   ')
+         print('RX total: ' + str(round(rx / 1000000000000, 2)) + ' TB                   ')
       elif(rx / 1000000000 > 1):
-         print('RX total: ' + str(rx / 1000000000) + ' GB                   ')
+         print('RX total: ' + str(round(rx / 1000000000, 2)) + ' GB                   ')
       elif(rx / 1000000 > 1):
-         print('RX total: ' + str(rx / 1000000) + ' MB                   ')
+         print('RX total: ' + str(round(rx / 1000000, 2)) + ' MB                   ')
       elif(rx / 1000 > 1):
-         print('RX total: ' + str(rx / 1000) + ' kB                   ')
+         print('RX total: ' + str(round(rx / 1000, 2)) + ' kB                   ')
       else:
          print('RX total: ' + str(rx) + ' B                   ')
       
       if(tx / 1000000000000 > 1):
-         print('TX total: ' + str(tx / 1000000000000) + ' TB                   ')
+         print('TX total: ' + str(round(tx / 1000000000000, 2)) + ' TB                   ')
       elif(tx / 1000000000 > 1):
-         print('TX total: ' + str(tx / 1000000000) + ' GB                   ')
+         print('TX total: ' + str(round(tx / 1000000000, 2)) + ' GB                   ')
       elif(tx / 1000000 > 1):
-         print('TX total: ' + str(tx / 1000000) + ' MB                   ')
+         print('TX total: ' + str(round(tx / 1000000, 2)) + ' MB                   ')
       elif(tx / 1000 > 1):
-         print('TX total: ' + str(tx / 1000) + ' kB                   ')
+         print('TX total: ' + str(round(tx / 1000, 2)) + ' kB                   ')
       else:
          print('TX total: ' + str(tx) + ' B                   ')
 
